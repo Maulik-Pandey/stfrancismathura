@@ -1,0 +1,61 @@
+
+/*####################################################*/
+/*** DATE AREA ***/
+/*####################################################*/
+.mouseico {
+	height: 71px;
+	width: 260px;
+	position: relative;
+	content: "";
+}
+
+#disqus_thread {
+	opacity: 0.8;
+	padding-right: 10px;
+}
+
+.tt-b-day {
+	font-size: 28px;
+	float: left;
+	padding-left: 10px;
+	line-height: 59px;
+	margin-left: -1px;
+	border-left: 1px solid rgba(0,0,0,0.1);	
+	color: #fff;
+}
+.rem-border {
+	border-left: none;
+}
+
+.tt-b-time {
+	font-size: 28px;
+	float: left;
+	line-height: 50px;	
+	color: #fff;
+}
+
+.tt-b-time-r {
+	float: left;
+	padding-left: 10px;
+	margin-right: -1px;
+	border-right: 1px solid rgba(0,0,0,0.1);	
+	color: #fff;
+}
+
+.tt-b-day-r, .tt-b-amp {
+	float: left;
+	font-size: 10px;
+	line-height: 12px;
+	padding-top: 18px;
+	padding-left: 5px;
+	padding-right: 10px;	
+	color: #fff;
+}
+
+.tt-b-amp {
+	padding-right: 15px;
+}
+
+.tt-b-month {
+	text-transform: uppercase;
+}

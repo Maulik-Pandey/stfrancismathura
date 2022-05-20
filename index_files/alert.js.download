@@ -1,0 +1,54 @@
+$(document).ready(function() {
+	$('#menu-alert').on('click', '.reveal-menu-alert', function(e) {
+		e.preventDefault();
+
+		var top_menu = $('#top-menu-alert');
+		var sub_menu = $('#sub-menu');
+
+		top_menu.toggleClass('genie');
+
+		if( sub_menu.hasClass('slide') )
+			sub_menu.removeClass('slide');
+
+		btn_msg( top_menu, $(this) );
+			
+	});
+
+	$('#top-menu-alert').on('click', '.has_slideout', function(e) {
+		e.preventDefault();
+		var sub = $(this).next('div');
+
+		sub.addClass('slide');
+	});
+
+	$('#sub-menu').on('click', '#back', function(e) {
+		e.preventDefault();
+		var sub = $(this).closest('div');
+
+		sub.removeClass('slide');
+	});
+
+	$('#menu-alert').on('click', '.close-btn-alert', function(e) {
+		e.preventDefault();
+		var menu_to_close = $(this).closest('div');
+
+		if(menu_to_close.hasClass('genie')) {
+			menu_to_close.removeClass('genie');
+			btn_msg( menu_to_close, $('.reveal-menu-alert') );
+		}
+
+		if(menu_to_close.hasClass('slide'))
+			menu_to_close.removeClass('slide');
+
+		
+	});
+
+	function btn_msg( item, btn ) {
+
+		if( item.hasClass('genie') )
+			btn.html('<span class="icon-alert"><i class="fa fa-close"></i></span> ');
+		else
+			btn.html('<span class="icon-alert"><i class="fa fa-bell"></i></span> ');
+	}
+
+});
